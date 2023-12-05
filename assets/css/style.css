@@ -1,5 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Poppins', sans-serif;
 }
 
 a,
@@ -65,7 +69,7 @@ header {
 
 .brand .brand-name h5 {
     font-size: 18px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #8888;
@@ -85,6 +89,11 @@ header {
     color: #f7f306;
     text-transform: uppercase;
     font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn.btn-utama:hover {
+    background-color: #012952;
 }
 
 
@@ -104,9 +113,10 @@ nav {
 }
 
 .bg-biru {
-    background-color: #3081D0!important;
+    background-color: #3081D0 !important;
     color: #fff;
 }
+
 
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
@@ -115,12 +125,12 @@ nav {
 .navbar-dark .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .show>.nav-link {
+.navbar-dark .navbar-nav .show>.nav-link:hover {
     color: #fff;
 }
 
 .active {
-    background-color: #f7f306;
+
     color: #fff;
 }
 
@@ -128,13 +138,54 @@ li.nav-item.active a {
     color: #fff;
 }
 
+
 .navbar-dark .navbar-nav .nav-link {
     padding: 17px 20px;
     display: inline-block;
+
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    padding: 17px 20px;
+    display: inline-block;
+    background-color: #e7e414;
 }
 
 
 /* css untuk slider hero area */
+#hero-area {
+    position: relative;
+}
+
+#slider-hero-nav .owl-prev,
+#slider-hero-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    border: none;
+    background-color: #3081D0;
+    color: #fff;
+    outline: none;
+    padding: 10px 25px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+#slider-hero-nav .owl-prev {
+    left: 0px;
+    border-radius: 0 50px 50px 0;
+}
+
+#slider-hero-nav .owl-next {
+    right: 0px;
+    border-radius: 50px 0 0 50px;
+}
+
+#slider-hero-nav .owl-prev:hover,
+#slider-hero-nav .owl-next:hover {
+    cursor: pointer;
+    background-color: rgb(243, 239, 5);
+}
 
 #hero-area .slider-item-content {
     position: absolute;
@@ -144,14 +195,135 @@ li.nav-item.active a {
     background-color: rgba(255, 255, 255, 0.7);
     color: #3081D0;
     padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 50%;
+
+
 }
 
-#slider-hero-nav .owl-prev #slider-hero-nav .owl-next {
+#hero-area .slider-item-content h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#hero-area .slider-item-content p {
+    font-size: 15px;
+}
+
+/* css untuk sectin sambutan */
+
+#sambutan {
+    margin: 60px 0;
+}
+
+#sambutan h2,
+#sambutan h3 {
+    color: #0159b1;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#sambutan h3 {
+    color: #012952;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#sambutan p {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 500;
+    line-height: 30px;
+}
+
+/* css untuk section prestasi */
+
+#prestasi {
+    height: 250px;
+}
+
+.section-item {
+    margin: 50px 0;
+}
+
+.section-item-thumbnail {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 260px;
+}
+
+.section-title {
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+.section-title h2 {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #012952;
+    font-weight: 450;
+}
+
+.section-title h2:after {
     position: absolute;
-    top: 50%;
+    content: "";
+    width: 30%;
+    height: 3px;
+    background-color: #f7f306;
+    bottom: -20px;
     left: 50%;
-    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.section-item-title {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
 
 
-/* #slider-hero-nav .owl-next {} */
+.section-item-title h2 {
+    font-size: 18px;
+    color: #012952;
+    line-height: 25px;
+    font-weight: 600;
+    padding-right: 40px;
+}
+
+.section-item-title span {
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+
+}
+
+.section-item-title span i {
+    margin-right: 5px;
+}
+
+.section-item-title span:first-of-type {
+    margin-right: 15px;
+}
+
+.section-item-body p {
+    font-size: 12px;
+    line-height: 25px;
+    color: #666;
+}
+
+p {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 414px) {
+    .video-wrapper>iframe {
+        width: 380px;
+        height: 260px;
+    }
+}

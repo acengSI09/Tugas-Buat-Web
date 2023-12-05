@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    $("#slider-hero").owlCarousel({
+    $(".owl-carousel").owlCarousel({
+        loop: true,
         nav: true,
         items: 1,
         navText: [
@@ -8,6 +9,10 @@ $(document).ready(function() {
             "<li class='fas fa-angle-right'><i>"
         ],
         navContainer: "#slider-hero-nav",
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        itemElement:true,
     });
 
 
